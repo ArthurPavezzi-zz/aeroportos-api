@@ -24,7 +24,7 @@ Route::get('airports', [Controllers\ApiController::class, 'getAllAirports']);
 
 Route::get('airports/{id}', [Controllers\ApiController::class, 'getSingleAirport']);
 
-$otherVerbs = ['delete', 'options', 'patch', 'post', 'put', 'view'];
+$otherVerbs = ['delete', 'options', 'patch', 'post', 'put'];
 Route::match($otherVerbs, 'airports', [Controllers\ApiController::class, 'handleOtherVerbs']);
 
 Route::match($otherVerbs, 'airports/{id}', [Controllers\ApiController::class, 'handleOtherVerbs']);
