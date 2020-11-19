@@ -1,0 +1,26 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-content: center;
+    align-items: center;
+    vertical-align: center;
+}
+
+main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+}
+
+main h1 {
+    font-size: 3rem;
+}
