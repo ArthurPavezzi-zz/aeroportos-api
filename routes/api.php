@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers;
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,11 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('airports', [Controllers\ApiController::class, 'getAllAirports']);
+Route::get('airports', [ApiController::class, 'getAllAirports']);
 
-Route::get('airports/{id}', [Controllers\ApiController::class, 'getSingleAirport']);
+Route::get('airports/{id}', [ApiController::class, 'getSingleAirport']);
 
 $otherVerbs = ['delete', 'options', 'patch', 'post', 'put'];
-Route::match($otherVerbs, 'airports', [Controllers\ApiController::class, 'handleOtherVerbs']);
+Route::match($otherVerbs, 'airports', [ApiController::class, 'handleOtherVerbs']);
 
-Route::match($otherVerbs, 'airports/{id}', [Controllers\ApiController::class, 'handleOtherVerbs']);
+Route::match($otherVerbs, 'airports/{id}', [ApiController::class, 'handleOtherVerbs']);
