@@ -8,11 +8,11 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="../public/css/app.css" rel="stylesheet">
 </head>
 <body>
 <main>
-    <img src="takeoffsvg.svg" alt="Avião decolando">
+    <img src="../public/takeoffsvg.svg" alt="Avião decolando">
     <h1>Aeroportos API</h1>
 </main>
 </body>
