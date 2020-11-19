@@ -57,6 +57,41 @@ class ApiTest extends TestCase
         $response->assertStatus(404);
     }
 
+    public function testHandleOtherVerbs_delete()
+    {
+        $response = $this->delete('/api/airports');
+
+        $response->assertStatus(400);
+    }
+
+    public function testHandleOtherVerbs_options()
+    {
+        $response = $this->options('/api/airports');
+
+        $response->assertStatus(400);
+    }
+
+    public function testHandleOtherVerbs_patch()
+    {
+        $response = $this->patch('/api/airports');
+
+        $response->assertStatus(400);
+    }
+
+    public function testHandleOtherVerbs_post()
+    {
+        $response = $this->post('/api/airports');
+
+        $response->assertStatus(400);
+    }
+
+    public function testHandleOtherVerbs_put()
+    {
+        $response = $this->put('/api/airports');
+
+        $response->assertStatus(400);
+    }
+
     private function getResponse(?string $id = null): TestResponse
     {
         if ($id !== null) {
