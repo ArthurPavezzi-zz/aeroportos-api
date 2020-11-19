@@ -40,7 +40,6 @@ class ApiController extends Controller
     private function getAirports(): string
     {
         $airports = file_get_contents(public_path('airports_br.json'));
-        $airports = mb_convert_encoding($airports, 'UTF-8', "ISO-8859-1");
         return $airports;
     }
 
